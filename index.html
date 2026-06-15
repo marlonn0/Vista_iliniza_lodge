@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Iliniza Lodge | Enlaces Oficiales</title>
+    
+    <!-- Favicon (El ícono de la pestaña del navegador) -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    
+    <!-- Tipografías e Íconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Archivo de estilos en la misma raíz -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTENEDOR DE CRISTAL CENTRAL -->
+    <main class="glass-panel">
+        
+        <!-- CABECERA DE LA LANDING -->
+        <header class="lodge-header">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Vista Iliniza Lodge Logo" class="logo-img">
+            </div>
+            <h1 class="lodge-title">Vista Iliniza Lodge</h1>
+            <p class="lodge-desc">A solo una hora y media de Quito. Un refugio encantador que combina la calidez y comodidad de lujosas cabañas de madera con la belleza imponente de la naturaleza.</p>
+        </header>
+
+        <!-- LISTA DE ENLACES COMPLETA -->
+        <nav class="links-list">
+            
+            <!-- Botón 1: Desplegable de Cabañas -->
+            <button class="link-item btn-highlight" id="btn-abrir-cabanas">
+                <div class="link-icon-left"><i class="fa-solid fa-house-chimney-window"></i></div>
+                <div class="link-text">
+                    <strong>Conoce nuestras cabañas</strong>
+                    <span>Galería de fotos, detalles e instalaciones</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+
+            <!-- Bloque Desplegable de Cabañas -->
+            <div class="cabins-dropdown" id="cabins-dropdown">
+                <div class="rooms-grid">
+                    <div class="room-item" data-target="modal-iliniza">
+                        <img src="img/vista-iliniza.jpg" alt="Vista Iliniza">
+                        <span>Cabaña Vista Iliniza</span>
+                    </div>
+                    <div class="room-item" data-target="modal-cotopaxi">
+                        <img src="img/vista-cotopaxi.jpg" alt="Vista Cotopaxi">
+                        <span>Cabaña Vista Cotopaxi</span>
+                    </div>
+                    <div class="room-item" data-target="modal-cielo">
+                        <img src="img/vista-cielo.jpg" alt="Vista Cielo">
+                        <span>Cabaña Vista Cielo</span>
+                    </div>
+                </div>
+                <p class="dropdown-hint">Toca una imagen para ampliar los detalles y tarifas.</p>
+            </div>
+
+            <!-- Botón 2: Consultor de Disponibilidad en Tiempo Real -->
+            <button class="link-item btn-reservation" data-target="modal-consulta">
+                <div class="link-icon-left"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="link-text">
+                    <strong>Centro Virtual de Reservas</strong>
+                    <span>Consulta disponibilidad inmediata en el sistema</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </button>
+
+            <!-- Botón 3: Tarifas Oficiales -->
+            <a href="https://sites.google.com/view/vista-iliniza-lodge/precios?authuser=0" target="_blank" class="link-item">
+                <div class="link-icon-left"><i class="fa-solid fa-tags" style="color: #edb00a;"></i></div>
+                <div class="link-text">
+                    <strong>Precios y Promociones</strong>
+                    <span>Revisa nuestras tarifas y descuentos actualizados</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 4: Sitio Web Google Sites -->
+            <a href="https://sites.google.com/view/vista-iliniza-lodge/inicio" target="_blank" class="link-item">
+                <div class="link-icon-left"><i class="fa-solid fa-globe" style="color: #93c5fd;"></i></div>
+                <div class="link-text">
+                    <strong>Página web oficial</strong>
+                    <span>Servicios generales e información adicional</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 5: Ubicación Mapas -->
+            <a href="https://maps.app.goo.gl/LQG455WMAkWwXBpFA" target="_blank" class="link-item">
+                <div class="link-icon-left"><i class="fa-solid fa-map-location-dot" style="color: #fca5a5;"></i></div>
+                <div class="link-text">
+                    <strong>Cómo llegar</strong>
+                    <span>Ubicación exacta de nuestra hostería en Google Maps</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 6: Instagram -->
+            <a href="https://www.instagram.com/vista_iliniza" target="_blank" class="link-item">
+                <div class="link-icon-left bg-ig"><i class="fa-brands fa-instagram" style="color: white;"></i></div>
+                <div class="link-text">
+                    <strong>Instagram</strong>
+                    <span>Fotos, historias y novedades</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 7: Facebook -->
+            <a href="https://www.facebook.com/people/Vista-Iliniza-Lodge/100054441281494/" target="_blank" class="link-item">
+                <div class="link-icon-left bg-fb"><i class="fa-brands fa-facebook-f" style="color: white;"></i></div>
+                <div class="link-text">
+                    <strong>Facebook</strong>
+                    <span>Promociones y publicaciones</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 8: TikTok -->
+            <a href="https://www.tiktok.com/@vista.iliniza.lodge" target="_blank" class="link-item">
+                <div class="link-icon-left bg-tk"><i class="fa-brands fa-tiktok" style="color: white;"></i></div>
+                <div class="link-text">
+                    <strong>TikTok</strong>
+                    <span>Videos y experiencias en la hostería</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Botón 9: Telegram -->
+            <a href="#" target="_blank" class="link-item">
+                <div class="link-icon-left bg-tg"><i class="fa-brands fa-telegram" style="color: white;"></i></div>
+                <div class="link-text">
+                    <strong>Canal de Telegram</strong>
+                    <span>Únete para recibir noticias y ofertas de temporada</span>
+                </div>
+                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+        </nav>
+
+        <!-- RECUADRO DE SERVICIOS INCLUIDOS -->
+        <div class="info-box">
+            <h3 class="info-title">Tu estadía incluye:</h3>
+            <ul class="info-list">
+                <li><i class="fa-solid fa-circle-check"></i> Uso de instalaciones completas (Jacuzzi, cocina, etc.)</li>
+                <li><i class="fa-solid fa-circle-check"></i> Visita guiada a la granja con llamas, ovejas y cerdos.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Alimentación interactiva a cuyes, conejos y llamas.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Experiencia de vestimenta tradicional (poncho de borrego y sombrero).</li>
+                <li><i class="fa-solid fa-circle-check"></i> Observación demostrativa de ordeño en el campo.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Uso libre de mini chimenea en terraza y área de parrilla.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Fogata nocturna con asado de malvaviscos.</li>
+            </ul>
+            <div class="info-alert">
+                <i class="fa-solid fa-wine-glass"></i> Hospedajes los días viernes, sábados, domingos y feriados incluyen una botella de vino de cortesía.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- BOTÓN DE WHATSAPP FLOTANTE GLOBAL -->
+    <a href="https://wa.me/593999366565?text=Hola,%20solicito%20información%20sobre%20disponibilidad%20y%20tarifas%20de%20hospedaje." target="_blank" class="floating-wsp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Reserva aquí<br><small>Habla con nosotros</small></span>
+    </a>
+
+    <!-- ========================================================= -->
+    <!-- CAPA SUPERPUESTA DE MODALES (TARJETAS GRANDES OCULTAS) -->
+    <!-- ========================================================= -->
+    <div class="modal-overlay" id="modal-overlay">
+
+        <!-- 🔴 MODAL INTEGRADO: CONSULTOR DE DISPONIBILIDAD REAL 🔴 -->
+        <div class="modal-card" id="modal-consulta">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-color">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Centro Virtual de Reservas</h3>
+                <p>Verificación de fechas directa en nuestro sistema</p>
+            </div>
+            
+            <div class="modal-body-pad">
+                <div class="form-group">
+                    <label for="cons-cabana">Selecciona la cabaña:</label>
+                    <select id="cons-cabana" class="cons-input">
+                        <option value="Vista Iliniza">Cabaña Vista Iliniza</option>
+                        <option value="Vista Cotopaxi">Cabaña Vista Cotopaxi</option>
+                        <option value="Vista Cielo">Cabaña Vista Cielo</option>
+                    </select>
+                </div>
+
+                <div class="dates-row">
+                    <div class="form-group">
+                        <label for="cons-entrada">Fecha de Ingreso:</label>
+                        <input type="date" id="cons-entrada" class="cons-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="cons-salida">Fecha de Salida:</label>
+                        <input type="date" id="cons-salida" class="cons-input">
+                    </div>
+                </div>
+
+                <div class="guests-container">
+                    <div class="guest-row">
+                        <span class="guest-label">Adultos</span>
+                        <div class="counter-box">
+                            <button type="button" class="btn-count minus" data-target="count-adults" aria-label="Reducir adultos">-</button>
+                            <input type="number" id="count-adults" class="count-value" value="2" min="1">
+                            <button type="button" class="btn-count plus" data-target="count-adults" aria-label="Aumentar adultos">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-row">
+                        <span class="guest-label">Niños</span>
+                        <div class="counter-box">
+                            <button type="button" class="btn-count minus" data-target="count-kids" aria-label="Reducir niños">-</button>
+                            <input type="number" id="count-kids" class="count-value" value="0" min="0">
+                            <button type="button" class="btn-count plus" data-target="count-kids" aria-label="Aumentar niños">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn-buscar-dispo" class="btn-search-full">
+                    <i class="fa-solid fa-magnifying-glass"></i> Buscar Disponibilidad
+                </button>
+
+                <!-- Animación de Carga -->
+                <div id="loading-box" class="loading-box" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Consultando calendario de ocupación...</p>
+                </div>
+
+                <!-- Caja de Resultados Dinámicos -->
+                <div id="result-box" class="result-box" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA EXTENDIDA 1: CABAÑA VISTA ILINIZA -->
+        <div class="modal-card" id="modal-iliniza">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-gallery">
+                <img src="img/vista-iliniza.jpg" alt="Cabaña Vista Iliniza completa">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header-info">
+                    <span class="modal-tag">Ideal para Parejas o Familias</span>
+                    <h3 class="modal-title">Cabaña Vista Iliniza</h3>
+                </div>
+                <p class="modal-description">
+                    Un refugio encantador rodeado de un entorno impresionante con vistas directas al Iliniza y Cotopaxi. Cuenta con amplias ventanas estructurales estratégicamente posicionadas para admirar el majestuoso atardecer andino desde la comodidad de tus espacios.
+                </p>
+
+                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-bed"></i> Cama confortable de dos plazas y media.</li>
+                    <li><i class="fa-solid fa-tv"></i> Pantalla de televisión de 50 pulgadas configurada.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina completa equipada con utensilios de cocina y refrigerador.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado interno climatizado para relajación completa.</li>
+                </ul>
+
+                <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Iliniza." target="_blank" class="modal-btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- TARJETA EXTENDIDA 2: CABAÑA VISTA COTOPAXI -->
+        <div class="modal-card" id="modal-cotopaxi">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-gallery">
+                <img src="img/vista-cotopaxi.jpg" alt="Cabaña Vista Cotopaxi completa">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header-info">
+                    <span class="modal-tag">Diseño Rústico Alpino</span>
+                    <h3 class="modal-title">Cabaña Vista Cotopaxi</h3>
+                </div>
+                <p class="modal-description">
+                    Lujosa estructura de madera con diseño clásico A-Frame que ofrece una panorámica despejada hacia el volcán Cotopaxi. Ideal para desconectarse completamente del ruido urbano en una atmósfera íntima, segura y de alto confort.
+                </p>
+
+                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-bed"></i> Dormitorio en altillo con cama de dos plazas y media.</li>
+                    <li><i class="fa-solid fa-tv"></i> Sistema de televisión de 50 pulgadas.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada con vajilla completa, encimera y refrigerador.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado de relajación con ventanal panorámico panorámico.</li>
+                </ul>
+
+                <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Cotopaxi." target="_blank" class="modal-btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- TARJETA EXTENDIDA 3: CABAÑA VISTA CIELO -->
+        <div class="modal-card" id="modal-cielo">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-gallery">
+                <img src="img/vista-cielo.jpg" alt="Cabaña Vista Cielo completa">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header-info">
+                    <span class="modal-tag">Perfecta para Parejas</span>
+                    <h3 class="modal-title">Cabaña Vista Cielo</h3>
+                </div>
+                <p class="modal-description">
+                    Estructura premium construida en dos plantas. Diseñada meticulosamente para brindar una experiencia de glamping elevado, perfecta para contemplar los limpios cielos estrellados de Toacazo desde la comodidad térmica de tu habitación.
+                </p>
+
+                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-stairs"></i> Distribución de dos pisos con balcón frontal integrado.</li>
+                    <li><i class="fa-solid fa-bed"></i> Cama matrimonial con lencería térmica de alta montaña.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina completa funcional integrada en la planta baja.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi interno independiente con hidromasaje regulable.</li>
+                </ul>
+
+                <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Cielo." target="_blank" class="modal-btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script en la misma raíz -->
+    <script src="script.js"></script>
+</body>
+</html>

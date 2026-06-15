@@ -1,0 +1,349 @@
+/* =========================================
+   1. REGLAS BASE Y CONFIGURACIÓN PARALLAX
+   ========================================= */
+:root {
+    --brand-dark: #122818;
+    --brand-light: #204629;
+    --brand-button: rgba(27, 59, 34, 0.85);
+    --brand-button-hover: rgba(38, 80, 46, 0.95);
+    --brand-accent: #edb00a;
+    --glass-bg: rgba(18, 40, 24, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --bg-modal-light: #FFFAF6;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(18, 40, 24, 0.75), rgba(10, 20, 14, 0.92)), url('img/banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px 120px 15px; 
+    color: var(--text-main);
+}
+
+/* =========================================
+   2. CONTENEDOR GLASSMORPHISM PRINCIPAL
+   ========================================= */
+.glass-panel {
+    width: 100%;
+    max-width: 500px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 35px 20px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55);
+}
+
+.lodge-header { 
+    text-align: center; 
+    margin-bottom: 25px; 
+}
+
+/* AQUÍ SE QUITÓ EL FONDO BLANCO PARA EL LOGO */
+.logo-container {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.logo-img { 
+    width: 125px; 
+    display: block; 
+    height: auto;
+}
+
+.lodge-title { 
+    font-size: 1.5rem; 
+    color: var(--brand-accent); 
+    font-weight: 800; 
+    margin-bottom: 8px; 
+    letter-spacing: 0.5px;
+}
+
+.lodge-desc { 
+    font-size: 0.88rem; 
+    line-height: 1.5; 
+    color: var(--text-muted); 
+    font-weight: 500; 
+}
+
+/* =========================================
+   3. BOTONES DE ENLACES (LINKTREE PREMIUM)
+   ========================================= */
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--brand-button);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 14px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.25s ease;
+}
+
+.link-item:hover { 
+    background: var(--brand-button-hover); 
+    transform: translateY(-2px); 
+    border-color: rgba(255,255,255,0.15);
+}
+
+.link-icon-left {
+    background: rgba(0,0,0,0.22);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+.link-text { flex: 1; text-align: left; }
+.link-text strong { display: block; font-size: 0.92rem; font-weight: 700; margin-bottom: 3px; }
+.link-text span { display: block; font-size: 0.72rem; color: var(--text-muted); font-weight: 500; }
+.link-icon-right { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-left: 10px; }
+
+.btn-highlight { background: rgba(237, 176, 10, 0.12); border: 1px solid rgba(237, 176, 10, 0.35); }
+.btn-highlight .link-icon-left { color: var(--brand-accent); }
+.btn-highlight:hover { background: rgba(237, 176, 10, 0.22); }
+
+.btn-wsp { background: rgba(37, 211, 102, 0.12); border: 1px solid rgba(37, 211, 102, 0.35); }
+.btn-wsp .link-icon-left { color: #25D366; }
+.btn-wsp:hover { background: rgba(37, 211, 102, 0.22); }
+
+.btn-reservation { background: #ffffff; color: var(--brand-dark); border: 1px solid #ffffff; }
+.btn-reservation .link-icon-left { background: rgba(32, 70, 41, 0.08); color: var(--brand-light); }
+.btn-reservation .link-text span { color: #475569; }
+.btn-reservation .link-icon-right { color: #94a3b8; }
+.btn-reservation:hover { background: #f8fafc; border-color: #f8fafc; }
+
+.link-icon-left.bg-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.link-icon-left.bg-fb { background: #1877F2; }
+.link-icon-left.bg-tk { background: #000000; border: 1px solid rgba(255,255,255,0.2); }
+.link-icon-left.bg-tg { background: #0088cc; } /* ÍCONO DE TELEGRAM */
+
+/* =========================================
+   4. BLOQUE DESPLEGABLE DE CABAÑAS
+   ========================================= */
+.cabins-dropdown {
+    display: none; background: rgba(0,0,0,0.25); border-radius: 16px;
+    padding: 14px; border: 1px solid var(--glass-border);
+    margin-top: -4px; margin-bottom: 8px; animation: slideDown 0.3s ease-out forwards;
+}
+.cabins-dropdown.show { display: block; }
+.rooms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.rooms-grid .room-item:nth-child(3) { grid-column: span 2; }
+.room-item { background: #162f1b; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; border: 1px solid rgba(255,255,255,0.04); }
+.room-item:hover { transform: scale(1.02); border-color: var(--brand-accent); }
+.room-item img { width: 100%; height: 85px; object-fit: cover; display: block; }
+.room-item span { display: block; padding: 8px; font-size: 0.72rem; font-weight: 700; text-align: center; }
+.dropdown-hint { font-size: 0.68rem; color: var(--text-muted); text-align: center; margin-top: 8px; font-style: italic; }
+
+@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   5. CAJA INFORMATIVA DE INCLUSIONES (RESTAURADA A VERDE OSCURO ELEGANTE)
+   ========================================= */
+.info-box {
+    background: rgba(20, 45, 25, 0.85); /* Fondo oscuro semitransparente elegante */
+    border: 1px solid var(--glass-border);
+    color: var(--text-main); /* Textos blancos */
+    border-radius: 20px;
+    padding: 22px 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+.info-title { 
+    font-size: 1.05rem; 
+    font-weight: 800; 
+    margin-bottom: 12px; 
+    color: var(--brand-accent); /* Título dorado para resaltar */
+}
+.info-list { 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 9px; 
+    margin-bottom: 14px; 
+}
+.info-list li { 
+    font-size: 0.78rem; 
+    font-weight: 600; 
+    display: flex; 
+    gap: 8px; 
+    align-items: flex-start; 
+    line-height: 1.35; 
+}
+.info-list li i { 
+    color: #4ade80; /* Íconos verde claro brillante */
+    font-size: 0.85rem; 
+    margin-top: 1px; 
+}
+.info-alert {
+    background: rgba(237, 176, 10, 0.15); /* Fondo amarillento semitransparente */
+    border-left: 4px solid var(--brand-accent);
+    padding: 10px 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fde047; /* Texto amarillo claro que contrasta con el fondo oscuro */
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    line-height: 1.3;
+}
+
+/* =========================================
+   6. BOTÓN FLOTANTE COMERCIAL
+   ========================================= */
+.floating-wsp-btn {
+    position: fixed; bottom: 25px; right: 25px; background: var(--brand-light); color: #ffffff;
+    text-decoration: none; padding: 12px 22px; border-radius: 30px; display: flex;
+    align-items: center; gap: 12px; box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    border: 2px solid var(--brand-accent); z-index: 1000; transition: transform 0.2s;
+}
+.floating-wsp-btn i { font-size: 1.7rem; color: #4ade80; }
+.floating-wsp-btn span { line-height: 1.15; font-weight: 700; font-size: 0.92rem; }
+.floating-wsp-btn small { font-size: 0.72rem; font-weight: 500; opacity: 0.85; }
+.floating-wsp-btn:hover { transform: scale(1.05); background: var(--brand-dark); }
+
+/* =========================================
+   7. SISTEMA DE MODALES Y COMPROBADOR
+   ========================================= */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(6, 15, 10, 0.88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    z-index: 2000; display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 15px;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+
+.modal-card {
+    background: #FFFAF6; width: 100%; max-width: 460px; max-height: 85vh;
+    border-radius: 20px; overflow-y: auto; position: relative;
+    display: none; transform: translateY(25px); transition: transform 0.3s ease;
+    box-shadow: 0 25px 55px rgba(0,0,0,0.6); color: var(--brand-dark);
+}
+.modal-card.active { display: block; transform: translateY(0); }
+.modal-card::-webkit-scrollbar { width: 5px; }
+.modal-card::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+.close-modal {
+    position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.55); color: #ffffff;
+    border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+    font-size: 1.1rem; display: flex; justify-content: center; align-items: center;
+    z-index: 100; backdrop-filter: blur(4px); transition: background 0.2s;
+}
+.close-modal:hover { background: var(--brand-accent); color: var(--brand-dark); }
+
+/* Encabezado del Consultor */
+.modal-header-color { background: var(--brand-light); color: #ffffff; padding: 22px 18px; text-align: center; }
+.modal-header-color i { font-size: 2.2rem; margin-bottom: 8px; color: var(--brand-accent); }
+.modal-header-color h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 4px; }
+.modal-header-color p { font-size: 0.8rem; opacity: 0.85; }
+
+.modal-body-pad { padding: 22px 18px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--brand-light); margin-bottom: 5px; }
+
+.cons-input {
+    width: 100%; padding: 11px; border-radius: 10px; border: 1px solid #cbd5e1; background: #ffffff;
+    font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--brand-dark); outline: none;
+}
+.cons-input:focus { border-color: var(--brand-light); }
+.dates-row { display: flex; gap: 10px; }
+.dates-row .form-group { flex: 1; }
+
+/* Contadores */
+.guests-container { background: #f1f5f9; padding: 12px; border-radius: 12px; margin-bottom: 18px; }
+.guest-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.guest-row:last-child { margin-bottom: 0; }
+.guest-label { font-weight: 700; font-size: 0.88rem; color: #334155; }
+.counter-box { display: flex; align-items: center; gap: 12px; background: #ffffff; padding: 4px; border-radius: 30px; border: 1px solid #cbd5e1; }
+.btn-count { width: 28px; height: 28px; border-radius: 50%; border: none; background: #e2e8f0; color: var(--brand-dark); font-weight: 800; cursor: pointer; }
+.btn-count:hover { background: var(--brand-light); color: #ffffff; }
+
+/* Casilla de input de huespedes */
+.count-value { 
+    font-weight: 700; 
+    width: 30px; 
+    text-align: center; 
+    font-size: 0.88rem; 
+    border: none;
+    background: transparent;
+    outline: none;
+    -moz-appearance: textfield; 
+    color: var(--brand-dark);
+}
+.count-value::-webkit-outer-spin-button,
+.count-value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-search-full { width: 100%; padding: 14px; border-radius: 12px; border: none; background: var(--brand-light); color: #ffffff; font-weight: 800; font-size: 1rem; font-family: 'Montserrat'; cursor: pointer; box-shadow: 0 4px 12px rgba(32, 70, 41, 0.25); }
+.btn-search-full:hover { background: var(--brand-accent); color: var(--brand-dark); }
+
+/* Animación de Espera */
+.loading-box { text-align: center; padding: 15px 0; color: #475569; font-size: 0.85rem; font-weight: 600; }
+.spinner { border: 3px solid #e2e8f0; border-top: 3px solid var(--brand-light); border-radius: 50%; width: 35px; height: 35px; animation: spin 0.9s linear infinite; margin: 0 auto 8px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Cajas de Resultado */
+.result-box { margin-top: 15px; border-radius: 10px; padding: 16px; text-align: center; font-size: 0.85rem; font-weight: 600; line-height: 1.4; }
+.result-box.success { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+.result-box.error { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+.btn-wsp-success { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #ffffff; padding: 11px 18px; border-radius: 10px; text-decoration: none; margin-top: 12px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
+
+/* Diseño Interno Tarjetas de Cabaña */
+.modal-gallery { width: 100%; height: 210px; }
+.modal-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.modal-content { padding: 20px; }
+.modal-header-info { margin-bottom: 14px; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; }
+.modal-tag { display: inline-block; background: var(--brand-light); color: #ffffff; padding: 4px 10px; border-radius: 20px; font-size: 0.68rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+
+.modal-title { font-size: 1.3rem; font-weight: 800; color: var(--brand-dark); }
+.modal-description { font-size: 0.84rem; line-height: 1.5; color: #475569; margin-bottom: 18px; font-weight: 500; }
+.features-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; color: var(--brand-dark); }
+
+.features-list { list-style: none; margin-bottom: 22px; }
+.features-list li { font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; color: #334155; line-height: 1.4; }
+.features-list li i { color: var(--brand-accent); font-size: 1rem; width: 16px; text-align: center; margin-top: 1px; }
+
+.modal-btn-action { display: flex; justify-content: center; align-items: center; gap: 8px; background: var(--brand-light); color: #ffffff; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; }
+.modal-btn-action:hover { background: var(--brand-accent); color: var(--brand-dark); }
+
+/* =========================================
+   9. DISEÑO RESPONSIVO MÓVIL
+   ========================================= */
+@media (max-width: 480px) {
+    .glass-panel { padding: 30px 14px; border-radius: 20px; }
+    .rooms-grid { grid-template-columns: 1fr; }
+    .rooms-grid .room-item:nth-child(3) { grid-column: span 1; }
+    .floating-wsp-btn { bottom: 20px; right: 20px; padding: 10px 16px; }
+    .modal-gallery { height: 180px; }
+}
