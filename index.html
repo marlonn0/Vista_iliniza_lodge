@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista Iliniza Lodge | Enlaces Oficiales</title>
     
-    <!-- Favicon (El ícono de la pestaña del navegador) -->
     <link rel="icon" type="image/png" href="img/logo.png">
     
-    <!-- Tipografías e Íconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Archivo de estilos en la misma raíz -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CONTENEDOR DE CRISTAL CENTRAL -->
     <main class="glass-panel">
         
-        <!-- CABECERA DE LA LANDING -->
         <header class="lodge-header">
             <div class="logo-container">
                 <img src="img/logo.png" alt="Vista Iliniza Lodge Logo" class="logo-img">
@@ -31,10 +26,8 @@
             <p class="lodge-desc">A solo una hora y media de Quito. Un refugio encantador que combina la calidez y comodidad de lujosas cabañas de madera con la belleza imponente de la naturaleza.</p>
         </header>
 
-        <!-- LISTA DE ENLACES COMPLETA -->
         <nav class="links-list">
             
-            <!-- Botón 1: Desplegable de Cabañas -->
             <button class="link-item btn-highlight" id="btn-abrir-cabanas">
                 <div class="link-icon-left"><i class="fa-solid fa-house-chimney-window"></i></div>
                 <div class="link-text">
@@ -44,7 +37,6 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-down"></i></div>
             </button>
 
-            <!-- Bloque Desplegable de Cabañas -->
             <div class="cabins-dropdown" id="cabins-dropdown">
                 <div class="rooms-grid">
                     <div class="room-item" data-target="modal-iliniza">
@@ -59,11 +51,14 @@
                         <img src="img/vista-cielo.jpg" alt="Vista Cielo">
                         <span>Cabaña Vista Cielo</span>
                     </div>
+                    <div class="room-item" data-target="modal-fullday">
+                        <img src="img/promo-full-day.jpg" alt="Promo Full Day">
+                        <span>Promo Full Day</span>
+                    </div>
                 </div>
                 <p class="dropdown-hint">Toca una imagen para ampliar los detalles y tarifas.</p>
             </div>
 
-            <!-- Botón 2: Consultor de Disponibilidad en Tiempo Real -->
             <button class="link-item btn-reservation" data-target="modal-consulta">
                 <div class="link-icon-left"><i class="fa-solid fa-calendar-check"></i></div>
                 <div class="link-text">
@@ -73,18 +68,7 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </button>
 
-            <!-- Botón 3: Tarifas Oficiales -->
-            <a href="https://sites.google.com/view/vista-iliniza-lodge/precios?authuser=0" target="_blank" class="link-item">
-                <div class="link-icon-left"><i class="fa-solid fa-tags" style="color: #edb00a;"></i></div>
-                <div class="link-text">
-                    <strong>Precios y Promociones</strong>
-                    <span>Revisa nuestras tarifas y descuentos actualizados</span>
-                </div>
-                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
-            </a>
-
-            <!-- Botón 4: Sitio Web Google Sites -->
-            <a href="https://sites.google.com/view/vista-iliniza-lodge/inicio" target="_blank" class="link-item">
+            <a href="https://vistailiniza.github.io/Vista_Iliniza_Web/" target="_blank" class="link-item">
                 <div class="link-icon-left"><i class="fa-solid fa-globe" style="color: #93c5fd;"></i></div>
                 <div class="link-text">
                     <strong>Página web oficial</strong>
@@ -93,7 +77,6 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <!-- Botón 5: Ubicación Mapas -->
             <a href="https://maps.app.goo.gl/LQG455WMAkWwXBpFA" target="_blank" class="link-item">
                 <div class="link-icon-left"><i class="fa-solid fa-map-location-dot" style="color: #fca5a5;"></i></div>
                 <div class="link-text">
@@ -103,7 +86,6 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <!-- Botón 6: Instagram -->
             <a href="https://www.instagram.com/vista_iliniza" target="_blank" class="link-item">
                 <div class="link-icon-left bg-ig"><i class="fa-brands fa-instagram" style="color: white;"></i></div>
                 <div class="link-text">
@@ -113,7 +95,6 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <!-- Botón 7: Facebook -->
             <a href="https://www.facebook.com/people/Vista-Iliniza-Lodge/100054441281494/" target="_blank" class="link-item">
                 <div class="link-icon-left bg-fb"><i class="fa-brands fa-facebook-f" style="color: white;"></i></div>
                 <div class="link-text">
@@ -123,7 +104,6 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <!-- Botón 8: TikTok -->
             <a href="https://www.tiktok.com/@vista.iliniza.lodge" target="_blank" class="link-item">
                 <div class="link-icon-left bg-tk"><i class="fa-brands fa-tiktok" style="color: white;"></i></div>
                 <div class="link-text">
@@ -133,49 +113,30 @@
                 <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <!-- Botón 9: Telegram -->
-            <a href="#" target="_blank" class="link-item">
-                <div class="link-icon-left bg-tg"><i class="fa-brands fa-telegram" style="color: white;"></i></div>
-                <div class="link-text">
-                    <strong>Canal de Telegram</strong>
-                    <span>Únete para recibir noticias y ofertas de temporada</span>
-                </div>
-                <div class="link-icon-right"><i class="fa-solid fa-chevron-right"></i></div>
-            </a>
-
         </nav>
 
-        <!-- RECUADRO DE SERVICIOS INCLUIDOS -->
         <div class="info-box">
             <h3 class="info-title">Tu estadía incluye:</h3>
             <ul class="info-list">
                 <li><i class="fa-solid fa-circle-check"></i> Uso de instalaciones completas (Jacuzzi, cocina, etc.)</li>
                 <li><i class="fa-solid fa-circle-check"></i> Visita guiada a la granja con llamas, ovejas y cerdos.</li>
-                <li><i class="fa-solid fa-circle-check"></i> Alimentación interactiva a cuyes, conejos y llamas.</li>
                 <li><i class="fa-solid fa-circle-check"></i> Experiencia de vestimenta tradicional (poncho de borrego y sombrero).</li>
-                <li><i class="fa-solid fa-circle-check"></i> Observación demostrativa de ordeño en el campo.</li>
                 <li><i class="fa-solid fa-circle-check"></i> Uso libre de mini chimenea en terraza y área de parrilla.</li>
-                <li><i class="fa-solid fa-circle-check"></i> Fogata nocturna con asado de malvaviscos.</li>
             </ul>
             <div class="info-alert">
-                <i class="fa-solid fa-wine-glass"></i> Hospedajes los días viernes, sábados, domingos y feriados incluyen una botella de vino de cortesía.
+                <i class="fa-solid fa-wine-glass"></i> Hospedajes los días viernes, sábados y feriados incluyen una botella de vino de cortesía.
             </div>
         </div>
 
     </main>
 
-    <!-- BOTÓN DE WHATSAPP FLOTANTE GLOBAL -->
     <a href="https://wa.me/593999366565?text=Hola,%20solicito%20información%20sobre%20disponibilidad%20y%20tarifas%20de%20hospedaje." target="_blank" class="floating-wsp-btn">
         <i class="fa-brands fa-whatsapp"></i>
         <span>Reserva aquí<br><small>Habla con nosotros</small></span>
     </a>
 
-    <!-- ========================================================= -->
-    <!-- CAPA SUPERPUESTA DE MODALES (TARJETAS GRANDES OCULTAS) -->
-    <!-- ========================================================= -->
     <div class="modal-overlay" id="modal-overlay">
 
-        <!-- 🔴 MODAL INTEGRADO: CONSULTOR DE DISPONIBILIDAD REAL 🔴 -->
         <div class="modal-card" id="modal-consulta">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header-color">
@@ -209,17 +170,17 @@
                     <div class="guest-row">
                         <span class="guest-label">Adultos</span>
                         <div class="counter-box">
-                            <button type="button" class="btn-count minus" data-target="count-adults" aria-label="Reducir adultos">-</button>
+                            <button type="button" class="btn-count minus" data-target="count-adults">-</button>
                             <input type="number" id="count-adults" class="count-value" value="2" min="1">
-                            <button type="button" class="btn-count plus" data-target="count-adults" aria-label="Aumentar adultos">+</button>
+                            <button type="button" class="btn-count plus" data-target="count-adults">+</button>
                         </div>
                     </div>
                     <div class="guest-row">
                         <span class="guest-label">Niños</span>
                         <div class="counter-box">
-                            <button type="button" class="btn-count minus" data-target="count-kids" aria-label="Reducir niños">-</button>
+                            <button type="button" class="btn-count minus" data-target="count-kids">-</button>
                             <input type="number" id="count-kids" class="count-value" value="0" min="0">
-                            <button type="button" class="btn-count plus" data-target="count-kids" aria-label="Aumentar niños">+</button>
+                            <button type="button" class="btn-count plus" data-target="count-kids">+</button>
                         </div>
                     </div>
                 </div>
@@ -228,38 +189,41 @@
                     <i class="fa-solid fa-magnifying-glass"></i> Buscar Disponibilidad
                 </button>
 
-                <!-- Animación de Carga -->
                 <div id="loading-box" class="loading-box" style="display: none;">
                     <div class="spinner"></div>
                     <p>Consultando calendario de ocupación...</p>
                 </div>
 
-                <!-- Caja de Resultados Dinámicos -->
                 <div id="result-box" class="result-box" style="display: none;"></div>
             </div>
         </div>
 
-        <!-- TARJETA EXTENDIDA 1: CABAÑA VISTA ILINIZA -->
         <div class="modal-card" id="modal-iliniza">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-gallery">
-                <img src="img/vista-iliniza.jpg" alt="Cabaña Vista Iliniza completa">
+                <img src="img/vista-iliniza.jpg" alt="Cabaña Vista Iliniza">
             </div>
             <div class="modal-content">
                 <div class="modal-header-info">
                     <span class="modal-tag">Ideal para Parejas o Familias</span>
                     <h3 class="modal-title">Cabaña Vista Iliniza</h3>
                 </div>
-                <p class="modal-description">
-                    Un refugio encantador rodeado de un entorno impresionante con vistas directas al Iliniza y Cotopaxi. Cuenta con amplias ventanas estructurales estratégicamente posicionadas para admirar el majestuoso atardecer andino desde la comodidad de tus espacios.
-                </p>
-
-                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                
+                <h4 class="features-title">Instalaciones:</h4>
                 <ul class="features-list">
-                    <li><i class="fa-solid fa-bed"></i> Cama confortable de dos plazas y media.</li>
-                    <li><i class="fa-solid fa-tv"></i> Pantalla de televisión de 50 pulgadas configurada.</li>
-                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina completa equipada con utensilios de cocina y refrigerador.</li>
-                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado interno climatizado para relajación completa.</li>
+                    <li><i class="fa-solid fa-bed"></i> Cama confortable de 2 plazas y media.</li>
+                    <li><i class="fa-solid fa-couch"></i> Sofá cama de 2 plazas, ideal para familias o grupos pequeños.</li>
+                    <li><i class="fa-solid fa-tv"></i> Televisores Smart de 50" y 32" para tu entretenimiento.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado interior climatizado, perfecto para disfrutar de un momento de relajación y descanso en cualquier momento.</li>
+                </ul>
+
+                <h4 class="features-title" style="margin-top: 15px;">Tarifas Oficiales:</h4>
+                <ul class="features-list" style="margin-bottom: 15px;">
+                    <li><i class="fa-solid fa-tag"></i> Domingo a jueves: $30 p/persona | <strong>$60 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Viernes: $40 p/persona | <strong>$80 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Sábados: $50 p/persona | <strong>$100 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Feriados: $65 p/persona | <strong>$130 pareja</strong></li>
                 </ul>
 
                 <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Iliniza." target="_blank" class="modal-btn-action">
@@ -268,27 +232,31 @@
             </div>
         </div>
 
-        <!-- TARJETA EXTENDIDA 2: CABAÑA VISTA COTOPAXI -->
         <div class="modal-card" id="modal-cotopaxi">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-gallery">
-                <img src="img/vista-cotopaxi.jpg" alt="Cabaña Vista Cotopaxi completa">
+                <img src="img/vista-cotopaxi.jpg" alt="Cabaña Vista Cotopaxi">
             </div>
             <div class="modal-content">
                 <div class="modal-header-info">
                     <span class="modal-tag">Diseño Rústico Alpino</span>
                     <h3 class="modal-title">Cabaña Vista Cotopaxi</h3>
                 </div>
-                <p class="modal-description">
-                    Lujosa estructura de madera con diseño clásico A-Frame que ofrece una panorámica despejada hacia el volcán Cotopaxi. Ideal para desconectarse completamente del ruido urbano en una atmósfera íntima, segura y de alto confort.
-                </p>
 
-                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                <h4 class="features-title">Instalaciones:</h4>
                 <ul class="features-list">
-                    <li><i class="fa-solid fa-bed"></i> Dormitorio en altillo con cama de dos plazas y media.</li>
-                    <li><i class="fa-solid fa-tv"></i> Sistema de televisión de 50 pulgadas.</li>
-                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada con vajilla completa, encimera y refrigerador.</li>
-                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado de relajación con ventanal panorámico panorámico.</li>
+                    <li><i class="fa-solid fa-bed"></i> Cama confortable de 2 plazas y media.</li>
+                    <li><i class="fa-solid fa-tv"></i> Televisión Smart de 55 pulgadas.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado interior climatizado para relajación completa.</li>
+                </ul>
+
+                <h4 class="features-title" style="margin-top: 15px;">Tarifas Oficiales:</h4>
+                <ul class="features-list" style="margin-bottom: 15px;">
+                    <li><i class="fa-solid fa-tag"></i> Domingo a jueves: $30 p/persona | <strong>$60 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Viernes: $40 p/persona | <strong>$80 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Sábados: $50 p/persona | <strong>$100 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Feriados: $65 p/persona | <strong>$130 pareja</strong></li>
                 </ul>
 
                 <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Cotopaxi." target="_blank" class="modal-btn-action">
@@ -297,27 +265,31 @@
             </div>
         </div>
 
-        <!-- TARJETA EXTENDIDA 3: CABAÑA VISTA CIELO -->
         <div class="modal-card" id="modal-cielo">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-gallery">
-                <img src="img/vista-cielo.jpg" alt="Cabaña Vista Cielo completa">
+                <img src="img/vista-cielo.jpg" alt="Cabaña Vista Cielo">
             </div>
             <div class="modal-content">
                 <div class="modal-header-info">
                     <span class="modal-tag">Perfecta para Parejas</span>
                     <h3 class="modal-title">Cabaña Vista Cielo</h3>
                 </div>
-                <p class="modal-description">
-                    Estructura premium construida en dos plantas. Diseñada meticulosamente para brindar una experiencia de glamping elevado, perfecta para contemplar los limpios cielos estrellados de Toacazo desde la comodidad térmica de tu habitación.
-                </p>
 
-                <h4 class="features-title">Equipamiento e instalaciones incluidas:</h4>
+                <h4 class="features-title">Instalaciones:</h4>
                 <ul class="features-list">
                     <li><i class="fa-solid fa-stairs"></i> Distribución de dos pisos con balcón frontal integrado.</li>
-                    <li><i class="fa-solid fa-bed"></i> Cama matrimonial con lencería térmica de alta montaña.</li>
-                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina completa funcional integrada en la planta baja.</li>
-                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi interno independiente con hidromasaje regulable.</li>
+                    <li><i class="fa-solid fa-bed"></i> Cama confortable de 2 plazas y media.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi privado interior climatizado para relajación completa.</li>
+                </ul>
+
+                <h4 class="features-title" style="margin-top: 15px;">Tarifas Oficiales:</h4>
+                <ul class="features-list" style="margin-bottom: 15px;">
+                    <li><i class="fa-solid fa-tag"></i> Domingo a jueves: $30 p/persona | <strong>$60 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Viernes: $40 p/persona | <strong>$80 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Sábados: $50 p/persona | <strong>$100 pareja</strong></li>
+                    <li><i class="fa-solid fa-tag"></i> Feriados: $65 p/persona | <strong>$130 pareja</strong></li>
                 </ul>
 
                 <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20fechas%20libres%20para%20hospedarme%20en%20la%20Cabaña%20Vista%20Cielo." target="_blank" class="modal-btn-action">
@@ -326,9 +298,42 @@
             </div>
         </div>
 
+        <div class="modal-card" id="modal-fullday">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-gallery">
+                <img src="img/promo-full-day.jpg" alt="Promo Full Day">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header-info">
+                    <span class="modal-tag">5 horas por pareja</span>
+                    <h3 class="modal-title">Promo Full Day</h3>
+                </div>
+                <p class="modal-description">
+                    La escapada perfecta en un solo día. Desconecta de la rutina y conecta con la naturaleza.
+                </p>
+
+                <h4 class="features-title">Beneficios incluidos:</h4>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-fire"></i> Mini chimenea.</li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi climatizado privado.</li>
+                    <li><i class="fa-solid fa-shirt"></i> Vestimenta tradicional de la zona.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada y área de parrilla.</li>
+                    <li><i class="fa-solid fa-paw"></i> Granja interactiva y alimentación de animales.</li>
+                </ul>
+
+                <h4 class="features-title" style="margin-top: 15px;">Tarifa Oficial:</h4>
+                <ul class="features-list" style="margin-bottom: 15px;">
+                    <li><i class="fa-solid fa-tag"></i> <strong>$49.99 por pareja</strong> (Válido de Domingo a Viernes)</li>
+                </ul>
+
+                <a href="https://wa.me/593999366565?text=Hola,%20deseo%20consultar%20disponibilidad%20para%20la%20Promo%20Full%20Day." target="_blank" class="modal-btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Script en la misma raíz -->
     <script src="script.js"></script>
 </body>
 </html>
