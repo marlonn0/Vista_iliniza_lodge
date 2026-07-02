@@ -155,12 +155,12 @@ body {
 }
 .cabins-dropdown.show { display: block; }
 
-/* CUADRICULA CORREGIDA PARA 4 ITEMS PERFECTOS */
 .rooms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-
 .room-item { background: #162f1b; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; border: 1px solid rgba(255,255,255,0.04); }
 .room-item:hover { transform: scale(1.02); border-color: var(--brand-accent); }
-.room-item img { width: 100%; height: 85px; object-fit: cover; display: block; }
+
+/* Se aumentó la altura en escritorio también para que se vean mejor las cabañas */
+.room-item img { width: 100%; height: 100px; object-fit: cover; object-position: center; display: block; }
 .room-item span { display: block; padding: 8px; font-size: 0.72rem; font-weight: 700; text-align: center; }
 .dropdown-hint { font-size: 0.68rem; color: var(--text-muted); text-align: center; margin-top: 8px; font-style: italic; }
 
@@ -329,8 +329,64 @@ body {
 .features-list li { font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; color: #334155; line-height: 1.4; }
 .features-list li i { color: var(--brand-accent); font-size: 1rem; width: 16px; text-align: center; margin-top: 1px; }
 
-.modal-btn-action { display: flex; justify-content: center; align-items: center; gap: 8px; background: var(--brand-light); color: #ffffff; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; }
+.modal-btn-action { display: flex; justify-content: center; align-items: center; gap: 8px; background: var(--brand-light); color: #ffffff; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; margin-top: 10px; }
 .modal-btn-action:hover { background: var(--brand-accent); color: var(--brand-dark); }
+
+/* =========================================
+   8. TABLA DE PRECIOS SIMÉTRICA (NUEVO)
+   ========================================= */
+.pricing-table {
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.pricing-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--brand-light);
+    color: white;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pricing-header > div:first-child {
+    text-align: left;
+}
+.pricing-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.8rem;
+    color: #334155;
+    align-items: center;
+}
+.pricing-row:last-child {
+    border-bottom: none;
+}
+.p-day {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+.p-day i {
+    color: var(--brand-accent);
+}
+.p-person {
+    text-align: center;
+    border-right: 1px solid #cbd5e1; /* La línea divisoria simétrica */
+}
+.p-couple {
+    text-align: center;
+    font-weight: 800;
+    color: var(--brand-dark);
+}
+
 
 /* =========================================
    9. DISEÑO RESPONSIVO MÓVIL
@@ -338,6 +394,29 @@ body {
 @media (max-width: 480px) {
     .glass-panel { padding: 30px 14px; border-radius: 20px; }
     .rooms-grid { grid-template-columns: 1fr; }
+    
+    /* AUMENTO DE ALTURA PARA LAS CABAÑAS EN MÓVIL */
+    .room-item img { 
+        height: 130px; 
+        object-position: center; 
+    }
+    
+    /* AJUSTES PARA LA TABLA SIMÉTRICA EN MÓVIL */
+    .pricing-row {
+        grid-template-columns: 1fr 0.9fr 0.9fr;
+        padding: 10px 5px;
+        font-size: 0.75rem;
+    }
+    .p-day {
+        font-size: 0.7rem;
+    }
+    .p-person {
+        font-size: 0.75rem;
+    }
+    .p-couple {
+        font-size: 0.75rem;
+    }
+    
     .floating-wsp-btn { bottom: 20px; right: 20px; padding: 10px 16px; }
     .modal-gallery { height: 180px; }
 }
